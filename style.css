@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f1ea;
+    color: #2c2c2c;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #a69f98;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+.logo img {
+    width: 80px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+#inicio {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #d1cbc4;
+    color: #2c2c2c;
+}
+
+#inicio h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+#inicio p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    grid-template-rows: repeat(3, 1fr);    /* Tres filas */
+    gap: 20px;
+    padding: 30px;
+}
+
+
+
+#proyectos h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+    text-align: center;
+    margin: 30px 0;
+    color: #2c2c2c;
+}
+
+
+.project {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    transition: background-color 0.3s ease;
+}
+
+.project:hover .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+}
+
+.content h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.content a {
+    color: #f4f1ea;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.content a:hover {
+    color: #e1ded9;
+}
+
+footer {
+    background-color: #a69f98;
+    padding: 15px;
+    text-align: center;
+    color: #2c2c2c;
+    font-size: 0.9em;
+}
